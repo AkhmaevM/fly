@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+:root {
+  --color-bg: #eaebef;
+  --color-block: #fff;
+  --color-text: #383844;
+  --color-muted: #6e6f77;
+  --color-accent-light: #ff5c00;
+  --color-accent-hover: #e14c00;
+  --color-border: #d1d1d6;
+  --color-shadow: rgba(0, 0, 0, 0.05);
+  --color-overlay: rgba(0, 0, 0, 0.1);
+  --color-success: #34c759;
+  --color-error: #ff3b30;
+  --color-warning: #ffcc00;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: 400;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+.header {
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header .logo {
+  color: var(--color-text);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.header .menu > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.header .menu > ul > li > a {
+  font-weight: 500;
+  color: var(--color-muted);
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.header .menu > ul > li > a:hover {
+  color: var(--color-text);
+}
