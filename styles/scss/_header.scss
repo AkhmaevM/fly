@@ -1,0 +1,26 @@
+.header {
+	padding: 2rem;
+	display: flex;
+	justify-content: space-between;
+
+	.logo {
+		color: $color-text;
+		font-size: 2rem;
+		font-weight: 700;
+	}
+	.menu > ul {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+
+		> li > a {
+			font-weight: 500;
+			color: $color-muted;
+			transition: color 0.3s ease;
+
+			&:hover {
+				color: $color-text;
+			}
+		}
+	}
+}

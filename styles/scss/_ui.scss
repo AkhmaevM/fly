@@ -1,0 +1,21 @@
+.btn {
+	border-radius: 1.5rem;
+	background-color: $color-block;
+	padding: 0.4rem 0.8rem;
+	font-weight: 600;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+	transition: background-color 0.4s ease;
+
+    &:hover{
+        background-color: #f1f1f1;
+    }
+
+	&--primary {
+		background-color: #16171c;
+		color: $color-block;
+
+        &:hover{
+            background-color: $color-text;
+        }
+	}
+}
