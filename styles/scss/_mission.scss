@@ -1,0 +1,17 @@
+.mission{
+    position: relative;
+    z-index: 2;
+    margin: 13rem auto 0;
+    width: 30%;
+    >div{
+        margin: .8rem auto; 
+        opacity: 0.6;
+        font-weight: 700;
+        font-size: 2.8rem;
+        line-height: 1.3;
+        text-align: center;
+        &:first-child{
+            opacity: 1;
+        }
+    }
+}
