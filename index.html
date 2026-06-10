@@ -1,34 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Private Jet</title>
-    <link rel="stylesheet" href="/styles/external/preflight-dist.css">
-    <link rel="icon" href="./assets/images/favicon.svg" type="imgage/svg+xml">
-    <link rel="stylesheet" href="/styles/scss/main.css">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Private Jet</title>
+		<link
+			rel="stylesheet"
+			href="/styles/external/preflight-dist.css"
+		/>
+		<link
+			rel="icon"
+			href="./assets/images/favicon.svg"
+			type="imgage/svg+xml"
+		/>
+		<link
+			rel="stylesheet"
+			href="/styles/scss/main.css"
+		/>
+	</head>
+	<body>
+		<header class="header container">
+			<a
+				href="/"
+				class="header__logo"
+			>
+				LetsFly
+			</a>
 
-</head>
-<body>
-    <header class="header">
-        <a href="/" class="header__logo">LetsFly</a>
+			<nav class="header__menu">
+				<ul>
+					<li><a href="#">Intro</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Costs</a></li>
+					<li><a href="#">Features</a></li>
+					<li><a href="#">FAQ</a></li>
+				</ul>
+			</nav>
+		</header>
 
-        <nav class="header__menu">
-            <ul>
-                <li><a href="#">Intro</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Costs</a></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">FAQ</a></li>
-            </ul>
-        </nav>
-    </header>
+		<main class="welcome">
+			<div class="welcome__info">
+				<div class="welcome__subtext">Personal jets</div>
+				<h1 class="welcome__title">
+					Luxury.
+					<br />
+					Affordable
+				</h1>
+				<div class="welcome__description">We believe loyalty shoud be rewarded</div>
 
-    <main class="welcome">
-        <div class="welcome__cta">
-            <button class="btn">Learn More</button>
-            <button class="btn btn--primary">Let`s fly</button>
-        </div>
-    </main>
-</body>
+				<div class="welcome__cta">
+					<button class="btn">Learn More</button>
+					<button class="btn btn--primary">Let`s fly</button>
+				</div>
+			</div>
+
+            <img src="./assets/images/plane/06.png" alt="plane" class="welcome__plane" draggable="false">
+		</main>
+	</body>
 </html>

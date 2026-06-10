@@ -12,6 +12,7 @@ body {
 
 	background-color: $color-bg;
 	color: $color-muted;
+	letter-spacing: 0.03em;
 }
 
 @mixin button-style($bg-color: $color-accent-light) {
@@ -25,6 +26,11 @@ button {
 	cursor: pointer;
 }
 
+.container{
+	min-width: 1650px;
+ 	width: 100%;
+	margin: 0 auto;
+}
 @import 'header';
 @import 'ui';
 @import 'welcome';
