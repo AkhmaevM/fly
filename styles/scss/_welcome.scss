@@ -1,21 +1,20 @@
 .welcome {
 	position: relative;
 	display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 60vh;
+	justify-content: center;
+	align-items: center;
+	min-height: 60vh;
 
 	&__info {
 		width: 40%;
 		margin: auto;
 		text-align: center;
-
 		position: relative;
 		z-index: 1;
 	}
 
 	&__title {
-		font-size: 6rem;
+		font-size:7rem;
 		font-weight: 600;
 		line-height: 1;
 	}
@@ -43,14 +42,60 @@
 
 	&__plane {
 		position: absolute;
-		
-        right: 0;
-        bottom: -1rem;
-        max-width: 80%;
-        height: auto;
-        margin-top: 0;
-        z-index: 0;
-        pointer-events:none;
-        user-select: none;
+		bottom: -18rem;
+		max-width: 65%;
+		height: auto;
+		margin-top: 0;
+		z-index: 1;
+		pointer-events: none;
+		user-select: none;
+	}
+
+	&__bg-clouds {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		z-index: 0;
+
+        >img{
+            position: absolute;
+            user-select: none;
+        }
+
+		> img:nth-child(1) {
+			top: -15rem;
+			left: 10rem;
+			width: 25vw;
+		}
+
+		> img:nth-child(2) {
+			top: 4rem;
+			left: 49%;
+			transform: translate(-50%);
+		}
+
+		> img:nth-child(3) {
+			top: -3rem;
+			right: -10rem;
+			width: 25vw;
+			transform: rotate(10deg);
+		}
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: -8rem;
+		z-index: 2;
+		background: radial-gradient(
+			elipse at 50% 30%,
+			rgba(110, 135, 175, 0.07) 0%,
+			transparent 75%
+		);
+		pointer-events: none;
 	}
 }

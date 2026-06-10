@@ -13,6 +13,8 @@ body {
 	background-color: $color-bg;
 	color: $color-muted;
 	letter-spacing: 0.03em;
+
+	overflow-x: hidden;
 }
 
 @mixin button-style($bg-color: $color-accent-light) {
