@@ -2,7 +2,7 @@
 :root {
   --color-bg: #eaebef;
   --color-block: #fff;
-  --color-text: #383844;
+  --color-text: #3b3b3b;
   --color-muted: #6e6f77;
   --color-accent-light: #ff5c00;
   --color-accent-hover: #e14c00;
@@ -27,6 +27,8 @@ body {
   color: var(--color-muted);
   letter-spacing: 0.03em;
   overflow-x: hidden;
+  max-width: 2560px;
+  margin: 0 auto;
 }
 
 button {
@@ -234,4 +236,38 @@ button {
   position: absolute;
   right: -10rem;
   bottom: -30rem;
+}
+
+.loaylty {
+  margin-top: 25rem;
+}
+.loaylty > div {
+  display: flex;
+  flex-direction: column;
+}
+.loaylty__top {
+  margin-left: auto;
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+.loaylty__image {
+  position: absolute;
+  height: auto;
+  max-width: 130%;
+  position: absolute;
+  left: -28rem;
+  top: 15rem;
+}
+.loaylty__bottom {
+  margin-top: 30rem;
+}
+.loaylty__bottom--title {
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+.loaylty__bottom--desciption {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 1.2rem 0 1.7ren;
+  width: 40%;
 }/*# sourceMappingURL=main.css.map */

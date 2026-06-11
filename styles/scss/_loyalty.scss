@@ -1,0 +1,36 @@
+.loaylty {
+	margin-top: 25rem;
+
+	> div {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__top {
+		margin-left: auto;
+		max-width: max-content;
+	}
+
+	&__image {
+		position: absolute;
+		height: auto;
+		max-width: 130%;
+		position: absolute;
+		left: -28rem;
+		top: 15rem;
+	}
+	&__bottom {
+		margin-top: 30rem;
+		&--title{
+			font-weight: 500;
+			font-size: 2.5rem;
+		}
+
+		&--desciption{
+			font-size: 1.2rem;
+			font-weight: 400;
+			margin: 1.2rem 0 1.7ren;
+			width: 40%;
+		}
+	}
+}

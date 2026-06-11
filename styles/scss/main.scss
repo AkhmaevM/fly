@@ -15,6 +15,9 @@ body {
 	letter-spacing: 0.03em;
 
 	overflow-x: hidden;
+
+	max-width: 2560px;
+	margin: 0 auto;
 }
 
 @mixin button-style($bg-color: $color-accent-light) {
@@ -45,3 +48,4 @@ button {
 @import 'welcome';
 @import 'mission';
 @import 'section-ui';
+@import 'loyalty';
