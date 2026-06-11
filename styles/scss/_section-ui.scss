@@ -1,0 +1,17 @@
+.section {
+	padding: 12rem;
+    position: relative;
+	&__description {
+		width: 54%;
+        margin: 1.7rem 0;
+	}
+}
+
+.luxury-flights__image{
+    height: auto;
+    min-width: 75%;
+    position: absolute;
+    right: -10rem;
+    bottom: -30rem;
+    
+}

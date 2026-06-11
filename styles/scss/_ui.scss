@@ -6,16 +6,50 @@
 	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 	transition: background-color 0.4s ease;
 
-    &:hover{
-        background-color: #f1f1f1;
-    }
+	&:hover {
+		background-color: #f1f1f1;
+	}
 
 	&--primary {
-		background-color: #16171c;
+		background-color: #393847;
 		color: $color-block;
 
-        &:hover{
-            background-color: $color-text;
-        }
+		&:hover {
+			background-color: $color-text;
+		}
+	}
+
+	&--gray {
+		background-color: #dcdde3;
+		color: #32323a;
+		box-shadow: 0;
+
+		&:hover {
+			background-color: $color-text;
+		}
+	}
+}
+
+.sub-title {
+	opacity: 0.7;
+	text-transform: uppercase;
+	font-size: 1.1rem;
+	font-weight: 500;
+}
+
+.description {
+	margin: 1.4rem 0 1.7rem;
+	font-size: 1.3rem;
+	font-weight: 500;
+}
+
+.section-title {
+	font-size: 9.5rem;
+	font-weight: 800;
+	line-height: 1;
+
+	>div{
+		font-weight: 400;
+		font-size: 6rem;
 	}
 }
