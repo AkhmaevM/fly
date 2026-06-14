@@ -13,6 +13,7 @@
 	&--primary {
 		background-color: #393847;
 		color: $color-block;
+		box-shadow: none;
 
 		&:hover {
 			background-color: $color-text;
@@ -22,11 +23,7 @@
 	&--gray {
 		background-color: #dcdde3;
 		color: #32323a;
-		box-shadow: 0;
-
-		&:hover {
-			background-color: $color-text;
-		}
+		box-shadow: none;
 	}
 }
 
@@ -41,15 +38,4 @@
 	margin: 1.4rem 0 1.7rem;
 	font-size: 1.3rem;
 	font-weight: 500;
-}
-
-.section-title {
-	font-size: 9.5rem;
-	font-weight: 800;
-	line-height: 1;
-
-	>div{
-		font-weight: 400;
-		font-size: 6rem;
-	}
 }
