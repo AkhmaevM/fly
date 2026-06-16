@@ -6,7 +6,7 @@
 	--color-text: #3b3b3b;
 	--color-muted: #6e6f77;
 
-	--color-accent-light: #ff5c00;
+	--color-accent: #ff5c00;
 	--color-accent-hover: #e14c00;
 
 	--color-border: #d1d1d6;
@@ -18,12 +18,14 @@
 	--color-warning: #ffcc00;
 }
 
+$font-family: 'Manrope', sans-serif;
+
 $color-bg: var(--color-bg);
 $color-block: var(--color-block);
-$color-muted: var(--color-muted);
 $color-text: var(--color-text);
+$color-muted: var(--color-muted);
 
-$color-accent-light: var(--color-accent-light);
+$color-accent: var(--color-accent);
 $color-accent-hover: var(--color-accent-hover);
 
 $color-border: var(--color-border);
@@ -32,6 +34,4 @@ $color-overlay: var(--color-overlay);
 
 $color-success: var(--color-success);
 $color-error: var(--color-error);
-$color-warning: var(color-warning);
-
-$font-family: 'Manrope', sans-serif;
+$color-warning: var(--color-warning);

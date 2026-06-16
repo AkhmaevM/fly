@@ -1,35 +1,29 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta
 			name="viewport"
-			content="width=device-width, initial-scale=1.0"
-		/>
+			content="width=device-width, initial-scale=1.0" />
 		<title>Private Jet</title>
 		<link
 			rel="stylesheet"
-			href="/styles/external/preflight-dist.css"
-		/>
+			href="./dist/css/preflight.min.css" />
+		<link
+			rel="stylesheet"
+			href="/styles/scss/main.css" />
 		<link
 			rel="icon"
 			href="./assets/images/favicon.svg"
-			type="imgage/svg+xml"
-		/>
-		<link
-			rel="stylesheet"
-			href="/styles/scss/main.css"
-		/>
+			type="image/svg+xml" />
 	</head>
 	<body>
 		<header class="header container">
 			<a
 				href="/"
-				class="header__logo"
-			>
+				class="header__logo non-select-image">
 				LetsFly
 			</a>
-
 			<nav class="header__menu">
 				<ul>
 					<li><a href="#">Intro</a></li>
@@ -42,112 +36,123 @@
 		</header>
 
 		<main class="welcome">
-			<div class="welcome__info">
+			<div class="welcome__information">
 				<div class="sub-title">Personal jets</div>
-				<h1 class="welcome__title">
-					Luxury.
-					<br />
-					Affordable
-				</h1>
-				<div class="description">We believe loyalty shoud be rewarded</div>
+				<h1 class="welcome__title">Luxury.<br />Affordable.</h1>
+				<div class="description">We believe loyalty should be rewarded.</div>
 
 				<div class="welcome__cta">
-					<button class="btn btn--gray">Learn More</button>
-					<button class="btn btn--primary">Let`s fly</button>
+					<button class="btn btn--gray">Learn more</button>
+					<button class="btn btn--primary">Let's Fly</button>
 				</div>
 			</div>
 
 			<img
-				src="./assets/images/plane/06.png"
-				alt="plane"
 				class="welcome__plane non-select-image"
-				draggable="false"
-			/>
+				src="/assets/images/plane/06.png"
+				draggable="false" />
 
 			<div class="welcome__bg-clouds">
 				<img
-					class="non-select-image"
 					src="/assets/images/clouds/left-cloud.png"
-					alt="cloud"
 					draggable="false"
-				/>
-
+					class="non-select-image" />
 				<img
-					class="non-select-image"
 					src="/assets/images/clouds/main-cloud.png"
-					alt="cloud"
 					draggable="false"
-				/>
-
+					class="non-select-image" />
 				<img
-					class="non-select-image"
 					src="/assets/images/clouds/right-cloud.png"
-					alt="cloud"
 					draggable="false"
-				/>
+					class="non-select-image" />
 			</div>
 		</main>
 
 		<div class="mission">
-			<div class="">One simple fly rate</div>
+			<div>One simple fly rate.</div>
 			<div>A discount that gets better and better.</div>
-			<div>Apply in minute.s</div>
-			<div>Built for rich people</div>
+			<div>Apply in minutes.</div>
+			<div>Built for rich people.</div>
 		</div>
 
 		<section>
 			<div class="container">
-				<div class="sub-title">Experience our</div>
+				<div class="sub-title">EXPERIENCE OUR</div>
 				<h2 class="section-title">
 					<div>Luxury</div>
-
 					Flights.
 				</h2>
-				<div class="description section__desciption">
+				<div class="description section__description">
 					Experience unmatched luxury in the skies. Our private jets offer
-					top-tier comfort, personalized serivce, and exquisite amenties for
+					top-tier comfort, personalized service, and exquisite amenities for
 					every journey.
 				</div>
+				<button class="btn btn--gray">Book now</button>
 			</div>
-			<button class="btn btn--gray">Book now</button>
-
 			<img
-				class="luxury-flight__image non-select-img"
+				class="luxury-flights__image non-select-image"
 				src="/assets/images/plane/05.png"
-				alt="plane"
 				draggable="false"
-			/>
+				alt />
 		</section>
 
 		<section class="loyalty">
 			<div class="container">
 				<div class="loyalty__top">
-					<div class="sub-title">SEEMLESSLY</div>
+					<div class="sub-title">SEAMLESSLY</div>
 					<h2 class="section-title">
 						<div>Instantly</div>
-
 						Booked.
 					</h2>
 				</div>
 				<img
-					class="loyalty__image non-select-img"
-					src="/assets/images/plane/01.png"
-					alt="plane"
+					class="loyalty__image non-select-image"
+					src="/assets/images/plane/loalty-plane.png"
 					draggable="false"
-				/>
-
+					alt />
 				<div class="loyalty__bottom">
-					<h3 class="loyalty__bottom--heading">Every. Single. Year</h3>
+					<h3 class="section-bottom-title">Every. Single. Year.</h3>
 					<div
-						class="loyalty__bottom--description description section__desciption"
-					>
+						class="section-bottom-description description section__description">
 						Enjoy new, exclusive perks and benefits every single year with our
-						luxury flight services
-						<br />
-						<br />
-						We believed lovely should be rewarded.
+						luxury flight services.<br /><br />
+						We believe lovely should be rewarded.
 
-						<button class="btn btn--gray">Get Started</button>
+						<button class="btn">Get Started</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="costs">
+			<div class="container">
+				<div class="costs__sub-heading">Instantly Low</div>
+				<h2 class="costs__heading">Costs.</h2>
+				<img
+					class="costs__image non-select-image"
+					src="/assets/images/plane/03.png"
+					draggable="false"
+					alt />
+
+				<div class="costs__bottom">
+					<div class="costs__bottom-left">
+						<h3 class="section-bottom-title">Personal Discounts.</h3>
+						<div
+							class="costs__bottom-description section-bottom-description description section__description">
+							Unlock tailored savings lust for vou. Exclusive personal discounts
+							on our luxury private jet services.
+						</div>
+						<div class="costs__bottom-buttons">
+							<button class="btn btn--gray">Learn more</button>
+							<button class="btn">Get Started</button>
+						</div>
+					</div>
+					<div class="costs__bottom-right">
+						<div>
+							<div>5.25</div>
+							<div><span>%</span><span>PA</span></div>
+						</div>
+						<div>Estimated Rate*</div>
 					</div>
 				</div>
 			</div>
