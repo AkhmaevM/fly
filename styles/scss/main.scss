@@ -2,6 +2,10 @@
 
 html {
 	font-size: 18px;
+
+	@media (max-width: 1920px) {
+		font-style: 16px;
+	}
 }
 
 body {
@@ -32,6 +36,7 @@ button {
 .non-select-image {
 	pointer-events: none;
 	user-select: none;
+	text-decoration: none;
 }
 
 @import 'ui';
@@ -41,3 +46,4 @@ button {
 @import 'section_ui';
 @import 'loyalty';
 @import 'costs';
+@import 'apply';

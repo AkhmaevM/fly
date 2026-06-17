@@ -6,9 +6,7 @@
 			name="viewport"
 			content="width=device-width, initial-scale=1.0" />
 		<title>Private Jet</title>
-		<link
-			rel="stylesheet"
-			href="./dist/css/preflight.min.css" />
+
 		<link
 			rel="stylesheet"
 			href="/styles/scss/main.css" />
@@ -93,13 +91,13 @@
 				class="luxury-flights__image non-select-image"
 				src="/assets/images/plane/05.png"
 				draggable="false"
-				alt />
+				alt='plane' />
 		</section>
 
 		<section class="loyalty">
 			<div class="container">
 				<div class="loyalty__top">
-					<div class="sub-title">SEAMLESSLY</div>
+					<div class="sub-title">SEAMLESS</div>
 					<h2 class="section-title">
 						<div>Instantly</div>
 						Booked.
@@ -124,6 +122,7 @@
 			</div>
 		</section>
 
+		
 		<section class="costs">
 			<div class="container">
 				<div class="costs__sub-heading">Instantly Low</div>
@@ -160,63 +159,62 @@
 
 		<section class="apply">
 			<div class="apply__grid">
-				<div class="apply__empty"></div>
-				<div class="apply__empty"></div>
+				<div class="apply__empty-wrapper">
+					<div class="apply__empty"></div>
+					<div class="apply__empty"></div>
+				</div>
 
 				<div class="apply__main">
 					<div class="apply__card apply__card--top">
-						<span class="apply__title">Apply in minute</span>
-
+						<span class="apply__title"> Apply in minutes. </span>
 						<button class="btn btn--gray">Learn more</button>
-
 						<img
-							src="/assets/images/plane/02.png"
-							alt="plane"
+							class="apply__first-plane non-select-image"
+							src="/assets/images/plane/apply.png"
 							draggable="false"
-							class="non-select-image"
-						/>
+							alt />
 					</div>
 
 					<div class="apply__row">
 						<div class="apply__card apply__card--left">
-							<div class="apply__title">
-								Backed by American`s leading airlines	
+							<img
+								class="apply__second-plane non-select-image"
+								src="/assets/images/plane/apply-2.png"
+								draggable="false"
+								alt />
+							<div class="apply__title apply__title--light">
+								Backed by American’s leading airlines.
 							</div>
-							<button class="apply__premium">Learn more</button>
-
-							<img src="" alt="plane" draggable="false" class="non-select-image">
+							<button class="btn btn--premium">Learn more</button>
 						</div>
 
 						<div class="apply__card apply__card--right">
-
 							<div class="apply__chat">
-								<div class="apply__message apply__message-user">
-									Nice. How can I switch to Let`s Fly?
+								<div class="apply__message apply__message--user">
+									Nice. How can I switch to Let’sFly?
 								</div>
-
-								<div class="apply__message apply__message-system">
-									Tap the 'Refinance Now' button to get started, If you habe any question, I`m here to help
+								<div class="apply__message apply__message--system">
+									Tap the 'Refinance Now' button to get started. If you have any
+									questions, I'm here to help.
 								</div>
-
-								<div class="apply__message apply__message-user">
-									All done!
+								<div class="apply__message apply__message--user">
+									👍 All done!
 								</div>
 							</div>
-
 							<div class="apply__support">
-								
-							<div class="apply__title">
-								Got a question?<br>We`re here to help.	
-							</div>
-							<button class="btn btn--gray">Chat with us</button>
-
+								<div class="apply__title">
+									Got a question?<br />We’re here to help.
+								</div>
+								<button class="btn btn--gray">Chat with us</button>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<div class="apply__empty"></div>
-				<div class="apply__empty"></div>
+				<div class="apply__empty-wrapper">
+					<div class="apply__empty"></div>
+					<div class="apply__empty"></div>
+				</div>
 			</div>
 		</section>
 	</body>

@@ -9,18 +9,26 @@
 	&__logo {
 		font-size: 2rem;
 		font-weight: 700;
+		text-decoration: none;
+		color: $color-text;
 	}
 
 	&__menu {
-		> ul {
+		>ul {
 			display: flex;
 			align-items: center;
 			gap: 1rem;
+			list-style-type: none;
 
-			> li > a {
+			>li {
+				list-style-type: none;
+			}
+
+			>li>a {
 				font-weight: 500;
 				color: $color-muted;
 				transition: color 0.3s ease;
+				text-decoration: none;
 
 				&:hover {
 					color: $color-text;
