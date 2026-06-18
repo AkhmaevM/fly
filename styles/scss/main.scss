@@ -25,6 +25,8 @@ body {
 
 button {
 	cursor: pointer;
+	background: none;
+	border: 0;
 }
 
 .container {
@@ -47,3 +49,4 @@ button {
 @import 'loyalty';
 @import 'costs';
 @import 'apply';
+@import 'faq';
