@@ -26,6 +26,16 @@
     &__item{
         margin-bottom: 2rem;
         transition: all .4s ease;
+
+        &--open{
+            .faq__answer{
+                display: block;
+            }
+
+            .faq__question::after{
+                content: '-';
+            }
+        }
     }
 
     &__question{

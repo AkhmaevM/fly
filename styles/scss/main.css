@@ -503,6 +503,12 @@ section {
   margin-bottom: 2rem;
   transition: all 0.4s ease;
 }
+.faq__item--open .faq__answer {
+  display: block;
+}
+.faq__item--open .faq__question::after {
+  content: "-";
+}
 .faq__question {
   font-size: 1.25rem;
   font-weight: 700;
