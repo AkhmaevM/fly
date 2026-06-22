@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', event => {
 	const zoomInFadeIn = '.zoom-in-fade-in'
 	const welcome = '.welcome'
 	const rightFadeIn = '.rightFadeIn'
+	const welcome__plane = '.welcome__plane'
 
 	gsap.set([fadeIn, rightFadeIn, zoomInFadeIn], {
 		force3D: true,
@@ -21,7 +22,7 @@ document.addEventListener('DOMContentLoaded', event => {
 	})
 
 	gsap.from(fadeIn, {
-		y: - 20,
+		y: -20,
 		opacity: 0,
 		duration: 0.8,
 		stargger: 0.1,
@@ -36,14 +37,6 @@ document.addEventListener('DOMContentLoaded', event => {
 		ease: 'power2.ease'
 	})
 
-	const welcomeTl = gsap.timeline({
-		ScrollTrigger: {
-			trigger: welcome,
-			start: 'top top',
-			scrub: true
-		}
-	})
-
 	gsap.from(zoomInFadeIn, {
 		scale: 0.8,
 		opacity: 0,
@@ -52,13 +45,34 @@ document.addEventListener('DOMContentLoaded', event => {
 		stagger: 0.1
 	})
 
-	welcomeTl.to(zoomInFadeIn, {
-		scale: 0.8,
-		opacity: 0,
-		ease: 'none'
+	gsap.from(welcome__plane, {
+		x: -140,
+		y: 50,
+		duration: 1.5,
+		ease: 'power2.ease'
 	})
-})
 
-window.addEventListener('load', () => {
-	ScrollTrigger.refresh()
+	const welcomeTl = gsap.timeline({
+		ScrollTrigger: {
+			trigger: welcome,
+			start: 'top top',
+			end: '+=120%',
+			scrub: true
+		}
+	})
+
+	welcomeTl
+		.to(zoomInFadeIn, {
+			scale: 0.8,
+			opacity: 0,
+			ease: 'none'
+		}, 0)
+		.to(welcome__plane, {
+			x: 140,
+			y: -50
+		}, 0)
+
+	window.addEventListener('load', () => {
+		ScrollTrigger.refresh()
+	})
 })

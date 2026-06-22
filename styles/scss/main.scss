@@ -41,6 +41,9 @@ button {
 	pointer-events: none;
 	user-select: none;
 	text-decoration: none;
+	will-change: transform;
+	backface-visibility: hidden;
+	transform: translateZ(0);
 }
 
 
