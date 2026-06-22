@@ -44,7 +44,11 @@ button {
 }
 
 
-.will-change-transform{
+.will-change-transform,
+.fade-in,
+.container,
+.right-fade-in
+{
 	will-change: transform;
 }
 

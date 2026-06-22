@@ -9,30 +9,56 @@ document.addEventListener('DOMContentLoaded', event => {
 		smoothTouch: 0.1 // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
 	})
 
-    gsap.set(['.fade-in', '.zoom-in-fade-in'],{
-        force3D: true,
-        transformPerspective: 1000,
-        backfaceVisibility: 'hidden'
-    })
+	const fadeIn = '.fade-in'
+	const zoomInFadeIn = '.zoom-in-fade-in'
+	const welcome = '.welcome'
+	const rightFadeIn = '.rightFadeIn'
 
-	gsap.from('.fade-in', {
-		y: 20,
+	gsap.set([fadeIn, rightFadeIn, zoomInFadeIn], {
+		force3D: true,
+		transformPerspective: 1000,
+		backfaceVisibility: 'hidden'
+	})
+
+	gsap.from(fadeIn, {
+		y: - 20,
 		opacity: 0,
 		duration: 0.8,
 		stargger: 0.1,
-		ease: 'power2.out'
+		ease: 'power2.easy'
 	})
 
-    gsap.from('.zoom-in-fade-in', {
-        scale:0.8,
-        opacity: 0,
-        duration: 0.4,
-        stagger:0.1,
-        ease: 'power2.out'
-    })
+	gsap.from(rightFadeInfadeIn, {
+		x: 20,
+		opacity: 0,
+		duration: 0.8,
+		stargger: 0.1,
+		ease: 'power2.ease'
+	})
+
+	const welcomeTl = gsap.timeline({
+		ScrollTrigger: {
+			trigger: welcome,
+			start: 'top top',
+			scrub: true
+		}
+	})
+
+	gsap.from(zoomInFadeIn, {
+		scale: 0.8,
+		opacity: 0,
+		duration: 0.8,
+		ease: 'power2.out',
+		stagger: 0.1
+	})
+
+	welcomeTl.to(zoomInFadeIn, {
+		scale: 0.8,
+		opacity: 0,
+		ease: 'none'
+	})
 })
 
-
-window.addEventListener('load', ()=>{
-    ScrollTrigger.refresh();
+window.addEventListener('load', () => {
+	ScrollTrigger.refresh()
 })
