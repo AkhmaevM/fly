@@ -1,152 +1,144 @@
 $gap: 1.5rem;
 
 .apply {
-    &__grid {
-        display: grid;
-        grid-template-columns: 1fr 2.35fr 1fr;
-        grid-template-rows: auto auto;
-        gap: $gap;
-    }
+	&__grid {
+		display: grid;
+		grid-template-columns: 1fr 2.35fr 1fr;
+		grid-template-rows: auto auto;
+		gap: $gap;
+	}
 
+	&__empty-wrapper {
+		display: grid;
+		grid-template-rows: 1fr 1fr;
+		gap: $gap;
+		height: 100%;
+		align-self: stretch;
+		grid-row: 1 / span 2;
+	}
 
-    &__empty-wrapper {
-        display: grid;
-        grid-template-rows: 1fr 1fr;
-        gap: $gap;
-        height: 100%;
-        align-self: stretch;
-        grid-row: 1 / span 2;
-    }
+	&__empty {
+		box-shadow: 0 2px 16px rgba($color: #000000, $alpha: 0.4);
+		background-color: #ececf0;
+		border-radius: 1.5rem;
+		height: 100%;
+		will-change: transform;
+	}
 
-    &__empty {
-        box-shadow: 0 2px 16px rgba($color: #000000, $alpha: 0.4);
-        background-color: #ececf0;
-        border-radius: 1.5rem;
-        height: 100%;
-    }
+	&__main {
+		grid-row: 1 / span 2;
+		display: flex;
+		flex-direction: column;
+		gap: $gap;
+		align-self: stretch;
+	}
 
+	&__first-plane {
+		position: absolute;
+		top: -2rem;
+		right: -2.5rem;
+		max-width: 80%;
+		height: auto;
+	}
 
-    &__main {
-        grid-row: 1 / span 2;
-        display: flex;
-        flex-direction: column;
-        gap: $gap;
-        align-self: stretch;
-    }
+	&__second-plane {
+		position: absolute;
+		top: -7.5rem;
+		left: -8rem;
+		max-width: 130%;
+		height: auto;
+	}
 
-    &__first-plane {
-        position: absolute;
-        top: -2rem;
-        right: -2.5rem;
-        max-width: 80%;
-        height: auto;
-    }
+	&__card {
+		box-shadow: 0 2px 16px rgba($color: #000000, $alpha: 0.1);
+		background-color: $color-block;
+		border-radius: 1rem;
+		padding: 1.7rem;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		gap: $gap;
+		overflow: hidden;
+		will-change: transform;
+		&--top {
+			min-height: 25rem;
+			justify-content: space-between;
 
-    &__second-plane {
-        position: absolute;
-        top: -7.5rem;
-        left: -8rem;
-        max-width: 130%;
-        height: auto;
-    }
+			> button {
+				width: max-content;
+			}
+		}
 
-    &__card {
-        box-shadow: 0 2px 16px rgba($color: #000000, $alpha: 0.1);
-        background-color: $color-block;
-        border-radius: 1rem;
-        padding: 1.7rem;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        gap: $gap;
-        overflow: hidden;
+		&--left {
+			padding-top: 15rem;
+			background: linear-gradient(to bottom, #373135, #2d2023);
+			color: #fff;
+			position: relative;
+			text-align: center;
+			padding-top: 15rem;
+			align-items: center;
 
-        &--top {
-            min-height: 25rem;
-            justify-content: space-between;
+			> button {
+				width: max-content;
+			}
+		}
 
-            >button {
-                width: max-content;
-            }
-        }
+		&--right {
+			background: #fff;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			gap: $gap;
+		}
+	}
 
-        &--left {
-            padding-top: 15rem;
-            background: linear-gradient(to bottom, #373135, #2d2023);
-            color: #fff;
-            position: relative;
-            text-align: center;
-            padding-top: 15rem;
-            align-items: center;
+	&__row {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: $gap;
+		width: 100%;
+	}
 
-            >button {
-                width: max-content;
-            }
-        }
+	&__title {
+		font-size: 1.9rem;
+		font-weight: 600;
+		color: #23233d;
+		line-height: 1.2;
 
-        &--right {
-            background: #fff;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            gap: $gap;
-        }
-    }
+		&--light {
+			color: #fff;
+		}
+	}
 
-    &__row {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: $gap;
-        width: 100%;
-    }
+	&__chat {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
 
-    &__title {
-        font-size: 1.9rem;
-        font-weight: 600;
-        color: #23233d;
-        line-height: 1.2;
+	&__message {
+		border-radius: 1rem;
+		padding: 0.6rem 1.2rem;
+		font-size: 0.9rem;
+		min-width: 80%;
 
-        &--light {
-            color: #fff;
-        }
-    }
+		&-user {
+			background: #26a4ff;
+			color: #fff;
+			align-self: flex-end;
+			margin-bottom: 0.3rem;
+		}
 
-    &__chat {
-        display: flex;
-        flex-direction: column;
-        gap: .5rem;
-    }
+		&-system {
+			background-color: $color-gray;
+			color: #23233d;
+			align-self: flex-start;
+		}
+	}
 
-    &__message {
-        border-radius: 1rem;
-        padding: 0.6rem 1.2rem;
-        font-size: 0.9rem;
-        min-width: 80%;
-
-        &-user {
-            background: #26a4ff;
-            color: #fff;
-            align-self: flex-end;
-            margin-bottom: .3rem;
-
-        }
-
-
-        &-system {
-            background-color: $color-gray;
-            color: #23233d;
-            align-self: flex-start;
-        }
-
-
-    }
-
-
-    &__support {
-        >button{
-            margin-top: 1rem;
-        }
-    }
-
-
+	&__support {
+		> button {
+			margin-top: 1rem;
+		}
+	}
 }

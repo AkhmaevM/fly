@@ -1,13 +1,14 @@
 .loyalty {
 	margin-top: 25rem;
 
-	>div {
+	> div {
 		display: flex;
 		flex-direction: column;
 
 		.loyalty__top {
 			margin-left: auto;
 			max-width: max-content;
+			will-change: transform;
 		}
 
 		.loyalty__image {
@@ -16,10 +17,12 @@
 			top: 15rem;
 			max-width: 130%;
 			height: auto;
+			will-change: transform;
 		}
 
 		.loyalty__bottom {
 			margin-top: 30rem;
+			will-change: transform;
 		}
 	}
 }

@@ -10,7 +10,8 @@
 
 
 .faq {
-
+    padding-top: 0rem;
+    will-change: transform;
     &__container{
         max-width: 920px;
     }
