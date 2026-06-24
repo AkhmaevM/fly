@@ -119,6 +119,39 @@ button {
   font-weight: 500;
 }
 
+.form__group {
+  margin-bottom: 1.4rem;
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #374151;
+}
+.form__group > span {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.form__group > input {
+  width: 100%;
+  padding: 0.6rem 0.9rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 0.5rem;
+  font-family: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.form__group > input:focus {
+  outline: none;
+  border-color: rgba(57, 56, 71, 0.7607843137);
+}
+.form__group > input::-moz-placeholder {
+  color: #9ca3af;
+}
+.form__group > input::placeholder {
+  color: #9ca3af;
+}
+.form__group:last-child {
+  margin-bottom: 0;
+}
+
 .header {
   padding: 2rem;
   display: flex;
@@ -563,4 +596,79 @@ section {
   padding-top: 0.5rem;
   animation: fadeIn 0.4s;
   display: none;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+.modal--active {
+  opacity: 1;
+  visibility: visible;
+}
+.modal--active .modal__content {
+  transform: scale(1);
+}
+.modal__overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(1px);
+  cursor: pointer;
+}
+.modal__container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 1.4rem;
+  pointer-events: none;
+}
+.modal__content {
+  position: relative;
+  background: whitesmoke;
+  border-radius: 1rem;
+  padding: 2.2rem;
+  max-width: 25rem;
+  width: 100%;
+  transform: scale(0.87);
+  transition: transform 0.3s ease;
+  pointer-events: auto;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+.modal__close {
+  position: absolute;
+  top: 0.8rem;
+  right: 1.3rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+.modal__close:hover {
+  opacity: 1;
+}
+.modal__header {
+  margin-bottom: 1.2rem;
+}
+.modal__title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+.modal__subtitle {
+  font-size: 0.9rem;
+  opacity: 0.6;
+  line-height: 1.45;
 }/*# sourceMappingURL=main.css.map */
