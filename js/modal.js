@@ -1,3 +1,41 @@
+async function sendToTelegram(data) {
+	const BOT_TOKEN = '8915412253:AAGLfXF-6XztqaUa2kmy4NTNLehtDcSM_G4'
+	const CHAT_ID = ''
+
+	const message = `
+	Новая заявка Let's Fly
+
+	Имя: ${data.name}
+	Email: ${data.email}
+	Время: ${new Date(data.timestamp).toLocaleString('ru-RU')}
+	`
+
+	try {
+		const response = await fetch(
+			`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`,
+			{
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify({
+					chat_id: CHAT_ID,
+					text: message
+				})
+			}
+		)
+
+		if (response.ok) {
+			alert('Application sent!')
+		} else {
+			alert('Sending error')
+		}
+	} catch (e) {
+		console.error(e)
+		alert('Error network')
+	}
+}
+
 const modal = document.querySelector('.modal')
 const modalOverlay = document.querySelector('.modal__overlay')
 const openButton = document.querySelector('#open-model-button')
@@ -19,7 +57,7 @@ function closeModal() {
 	form.reset()
 }
 
-function handleSubmit(e) {
+async function handleSubmit(e) {
 	e.preventDefault()
 
 	const name = document.getElementById('name').value
@@ -32,7 +70,8 @@ function handleSubmit(e) {
 
 	console.log('Succes', data)
 
-	alert('Submited!')
+	await sendToTelegram(data)
+
 
 	setTimeout(() => {
 		closeModal()
@@ -46,9 +85,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	form.addEventListener('click', handleSubmit)
 
-    document.addEventListener('keydown', (e)=>{
-        if(e.key === 'Escape' && modal.classList.contains('modal--active')){
-            closeModal()
-        }
-    })
+	document.addEventListener('keydown', e => {
+		if (e.key === 'Escape' && modal.classList.contains('modal--active')) {
+			closeModal()
+		}
+	})
 })
