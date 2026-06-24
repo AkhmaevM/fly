@@ -36,11 +36,14 @@ async function sendToTelegram(data) {
 	}
 }
 
-const modal = document.querySelector('.modal')
-const modalOverlay = document.querySelector('.modal__overlay')
-const openButton = document.querySelector('#open-model-button')
-const closeButton = document.querySelector('#close-modal-button')
-const form = document.querySelector('#application-form')
+
+const modal = document.getElementById('modal')
+const overlay = modal.querySelector('.modal__overlay')
+
+const openButton = document.getElementById('open-modal-button')
+const closeButton = document.getElementById('close-modal-button')
+
+const form = document.getElementById('application-form')
 
 function openModal() {
 	modal.classList.add('modal--active')
@@ -53,8 +56,8 @@ function openModal() {
 
 function closeModal() {
 	modal.classList.remove('modal--active')
-	document.style.overflow = ''
-	form.reset()
+	document.body.style.overflow = ''
+	form.reset() // Clear inputs
 }
 
 async function handleSubmit(e) {
@@ -62,16 +65,14 @@ async function handleSubmit(e) {
 
 	const name = document.getElementById('name').value
 	const email = document.getElementById('email').value
+
 	const data = {
 		name,
 		email,
 		timestamp: new Date().toISOString()
 	}
 
-	console.log('Succes', data)
-
 	await sendToTelegram(data)
-
 
 	setTimeout(() => {
 		closeModal()
@@ -83,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	closeButton.addEventListener('click', closeModal)
 	overlay.addEventListener('click', closeModal)
 
-	form.addEventListener('click', handleSubmit)
+	form.addEventListener('submit', handleSubmit)
 
 	document.addEventListener('keydown', e => {
 		if (e.key === 'Escape' && modal.classList.contains('modal--active')) {

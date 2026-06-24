@@ -153,12 +153,22 @@ button {
 }
 
 .header {
-  padding: 2rem;
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  background: transparent;
+  transition: background-color 0.3s ease;
+}
+.header--scrolled {
+  background: whitesmoke;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+.header > .container {
+  padding: 1.2rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
-  z-index: 1;
 }
 .header__logo {
   font-size: 2rem;
@@ -191,6 +201,7 @@ button {
   justify-content: center;
   align-items: center;
   min-height: 60vh;
+  margin-top: 7rem;
 }
 .welcome__information {
   width: 40%;

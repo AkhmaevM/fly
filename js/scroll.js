@@ -7,6 +7,33 @@ document.addEventListener('DOMContentLoaded', event => {
 		smoothTouch: 0.1 // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
 	})
 
+	/* Add bg header when start scroll */
+	const header = document.querySelector('.header')
+	ScrollTrigger.create({
+		start: 0,
+		end: 'max',
+		onUpdate: self => {
+			if (self.scroll() > 10) {
+				header.classList.add('header--scrolled')
+			} else {
+				header.classList.remove('header--scrolled')
+			}
+		}
+	})
+
+	/* Якоря */
+	document.querySelectorAll('.header__menu a').forEach(link => {
+		link.addEventListener('click', e => {
+			e.preventDefault()
+			const targetId = link.getAttribute('href').replace('#', '')
+			const target = document.getElementById(targetId)
+			if (target) {
+				const smoother = ScrollSmoother.get()
+				smoother.scrollTo(target, true)
+			}
+		})
+	})
+
 	const fadeIn = '.fade-in'
 	const rightFadeIn = '.right-fade-in'
 	const zoomInFadeIn = '.zoom-in-fade-in'
