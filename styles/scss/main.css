@@ -33,9 +33,10 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  line-height: 1, 5;
+  position: relative;
   max-width: 2560px;
   margin: 0 auto;
-  line-height: 1, 5;
 }
 
 button {
@@ -210,6 +211,11 @@ button {
   position: relative;
   z-index: 1;
 }
+@media (max-width: 1400px) {
+  .welcome__information {
+    width: 70%;
+  }
+}
 .welcome__title {
   font-size: 7rem;
   font-weight: 600;
@@ -231,6 +237,17 @@ button {
   z-index: 1;
   margin-left: -88px;
   will-change: transform;
+}
+@media (max-width: 820px) and (min-width: 1600px) {
+  .welcome__plane {
+    bottom: -24px;
+  }
+}
+@media (max-width: 1400px) {
+  .welcome__plane {
+    bottom: -20rem;
+    max-width: 100%;
+  }
 }
 .welcome__bg-clouds {
   position: absolute;
@@ -280,6 +297,11 @@ button {
   width: 28%;
   margin: 13rem auto 0;
 }
+@media (max-width: 1400px) {
+  .mission {
+    width: 50%;
+  }
+}
 .mission > div {
   margin: 1.3rem auto;
   opacity: 0.6;
@@ -290,53 +312,71 @@ button {
   letter-spacing: 0.01rem;
   will-change: transform;
 }
+@media (max-width: 1400px) {
+  .mission > div {
+    font-size: 2rem;
+  }
+}
 .mission > div:first-child {
   opacity: 1;
 }
 
-section {
+.section {
+  padding: 12rem;
   position: relative;
-  padding: 12rem 0;
 }
-
-.section-title {
-  font-size: 9.5rem;
-  font-weight: 800;
-  line-height: 1;
+@media (max-width: 1650px) {
+  .section {
+    padding: 10rem 3rem;
+  }
 }
-.section-title > div {
-  font-weight: 400;
-  font-size: 6rem;
+@media (max-width: 1400px) {
+  .section {
+    padding: 8rem 3rem;
+  }
 }
-
 .section__description {
   width: 54%;
   margin: 1.7rem 0;
 }
-
-.section-bottom-title {
+.section-title {
   font-weight: 500;
   font-size: 2.5rem;
 }
-
-.section-bottom-description {
-  margin: 1.2rem 0 1.7rem;
+.section-description {
   font-size: 1.2rem;
   font-weight: 400;
+  margin: 1.2rem 0 1.7ren;
   width: 40%;
+}
+@media (max-width: 1400px) {
+  .section-description {
+    width: 50%;
+  }
 }
 
 .luxury-flights__image {
-  position: absolute;
-  right: 0;
-  bottom: -30rem;
-  max-width: 75%;
   height: auto;
-  will-change: transform;
+  min-width: 75%;
+  position: absolute;
+  right: -10rem;
+  bottom: -30rem;
+  transform: rotate(10);
+}
+@media (max-width: 1400px) {
+  .luxury-flights__image {
+    bottom: -10rem;
+    max-width: 100%;
+  }
 }
 
 .loyalty {
   margin-top: 25rem;
+}
+@media (max-width: 1400px) {
+  .loyalty {
+    margin-top: 15rem;
+  }
 }
 .loyalty > div {
   display: flex;
@@ -360,6 +400,11 @@ section {
   margin-top: 30rem;
   will-change: transform;
 }
+@media (max-width: 1400px) {
+  .loyalty > div .loyalty__bottom {
+    margin-top: 20rem;
+  }
+}
 
 .costs > div .costs__sub-heading {
   text-transform: uppercase;
@@ -376,6 +421,12 @@ section {
   text-align: center;
   margin-top: -11rem;
 }
+@media (max-width: 1400px) {
+  .costs > div .costs__heading {
+    font-size: 23rem;
+    margin-top: -8rem;
+  }
+}
 .costs > div .costs__image {
   position: absolute;
   left: 2rem;
@@ -383,6 +434,11 @@ section {
   max-width: 110%;
   height: auto;
   will-change: transform;
+}
+@media (max-width: 1400px) {
+  .costs > div .costs__image {
+    top: 20rem;
+  }
 }
 .costs > div .costs__bottom-description {
   width: 55%;
@@ -433,11 +489,22 @@ section {
   justify-content: end;
 }
 
+@media (max-width: 1650px) {
+  .apply {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 .apply__grid {
   display: grid;
   grid-template-columns: 1fr 2.35fr 1fr;
   grid-template-rows: auto auto;
   gap: 1.5rem;
+}
+@media (max-width: 1400px) {
+  .apply__grid {
+    grid-template-columns: 1fr 5.6fr 1fr;
+  }
 }
 .apply__empty-wrapper {
   display: grid;
@@ -467,6 +534,13 @@ section {
   right: -2.5rem;
   max-width: 80%;
   height: auto;
+}
+@media (max-width: 1400px) {
+  .apply__first-plane {
+    max-width: 100%;
+    top: -5.35rem;
+    right: -10rem;
+  }
 }
 .apply__second-plane {
   position: absolute;

@@ -1,6 +1,10 @@
 .loyalty {
 	margin-top: 25rem;
 
+	@media (max-width: 1400px) {
+	  margin-top: 15rem;
+	}
+
 	> div {
 		display: flex;
 		flex-direction: column;
@@ -23,6 +27,10 @@
 		.loyalty__bottom {
 			margin-top: 30rem;
 			will-change: transform;
+
+			@media (max-width: 1400px) {
+			  margin-top: 20rem;
+			}
 		}
 	}
 }

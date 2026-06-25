@@ -20,9 +20,10 @@ body {
 	-webkit-text-size-adjust: 100%;
 	-webkit-font-smoothing: antialiased;
 	overflow-x: hidden;
+	line-height: 1, 5;
+	position: relative;
 	max-width: 2560px;
 	margin: 0 auto;
-	line-height: 1,5;
 }
 
 button {
@@ -46,24 +47,22 @@ button {
 	transform: translateZ(0);
 }
 
-
 .will-change-transform,
 .fade-in,
 .container,
-.right-fade-in
-{
+.right-fade-in {
 	will-change: transform;
 }
 
-#smmoth-content{
-	will-change: transform; 
+#smmoth-content {
+	will-change: transform;
 }
 
 @import 'ui';
 @import 'header';
 @import 'welcome';
 @import 'mission';
-@import 'section_ui';
+@import 'section-ui';
 @import 'loyalty';
 @import 'costs';
 @import 'apply';

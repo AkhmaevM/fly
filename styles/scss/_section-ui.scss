@@ -1,6 +1,13 @@
 .section {
     padding: 12rem;
     position: relative;
+    @media (max-width: 1650px) {
+        padding: 10rem 3rem;
+    }
+
+    @media (max-width: 1400px) {
+      padding: 8rem 3rem;
+    }
 
     &__description {
         width: 54%;
@@ -18,6 +25,10 @@
         font-weight: 400;
         margin: 1.2rem 0 1.7ren;
         width: 40%;
+
+        @media (max-width: 1400px) {
+          width: 50%;
+        }
     }
 }
 
@@ -28,4 +39,9 @@
     right: -10rem;
     bottom: -30rem;
     transform: rotate(10);
+
+    @media (max-width: 1400px) {
+      bottom: -10rem;
+      max-width: 100%;
+    }
 }
