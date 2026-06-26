@@ -24,6 +24,11 @@
 		  
 		}
 
+		@media (max-width: 1200px) {
+		  font-size: 2rem;
+		  margin: 1rem auto;
+		}
+
 		&:first-child {
 			opacity: 1;
 		}

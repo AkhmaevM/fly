@@ -1,47 +1,59 @@
 .section {
-    padding: 12rem;
-    position: relative;
-    @media (max-width: 1650px) {
-        padding: 10rem 3rem;
-    }
+	padding: 12rem;
+	position: relative;
 
-    @media (max-width: 1400px) {
-      padding: 8rem 3rem;
-    }
+	@media (max-width: 1650px) {
+		padding: 10rem 3rem;
+	}
 
-    &__description {
-        width: 54%;
-        margin: 1.7rem 0;
-    }
+	@media (max-width: 1400px) {
+		padding: 8rem 3rem;
+	}
 
+	@media (max-width: 1200px) {
+		padding: 7rem 2.5rem;
+	}
 
-    &-title {
-        font-weight: 500;
-        font-size: 2.5rem;
-    }
+	&__description {
+		width: 54%;
+		margin: 1.7rem 0;
+	}
 
-    &-description {
-        font-size: 1.2rem;
-        font-weight: 400;
-        margin: 1.2rem 0 1.7ren;
-        width: 40%;
+	&-title {
+		font-weight: 500;
+		font-size: 2.5rem;
+	}
 
-        @media (max-width: 1400px) {
-          width: 50%;
+	&-bottom-description {
+		font-size: 1.2rem;
+		font-weight: 400;
+		margin: 1.2rem 0 1.7rem;
+		width: 40%;
+
+		@media (max-width: 1400px) {
+			width: 50%;
+		}
+
+		@media (max-width: 1200px) {
+			width: 55%;
+		}
+
+        @media (max-width: 992px) {
+          width: 70%;
         }
-    }
+	}
 }
 
 .luxury-flights__image {
-    height: auto;
-    min-width: 75%;
-    position: absolute;
-    right: -10rem;
-    bottom: -30rem;
-    transform: rotate(10);
+	height: auto;
+	min-width: 75%;
+	position: absolute;
+	right: -10rem;
+	bottom: -30rem;
+	transform: rotate(10);
 
-    @media (max-width: 1400px) {
-      bottom: -10rem;
-      max-width: 100%;
-    }
+	@media (max-width: 1400px) {
+		bottom: -10rem;
+		max-width: 100%;
+	}
 }

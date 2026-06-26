@@ -24,6 +24,10 @@
 		background-color: #dcdde3;
 		color: #32323a;
 		box-shadow: none;
+
+		@media (max-width: 1200px) {
+			background-color: #fff;
+		}
 	}
 
 	&--premium {
