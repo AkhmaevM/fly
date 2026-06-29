@@ -9,6 +9,11 @@
 
 	}
 
+	@media (max-width: 768px) {
+	  margin-top: 10rem;
+	  width: 70%;
+	}
+
 	>div {
 		margin: 1.3rem auto;
 		opacity: 0.6;

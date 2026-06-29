@@ -16,12 +16,20 @@
 		@media (max-width: 1400px) {
 			width: 70%;
 		}
+
+		@media (max-width: 768px) {
+		  width: 80%;
+		}
 	}
 
 	&__title {
 		font-size: 7rem;
 		font-weight: 600;
 		line-height: 1;
+
+		@media (max-width: 768px) {
+		  font-size: 5rem;
+		}
 	}
 
 	&__cta {
@@ -54,6 +62,11 @@
 		@media (max-width: 1200px) {
 		  bottom: -18rem;
 		}
+
+		@media (max-width: 768px) {
+		  bottom: -14rem;
+		  max-width: 140%;
+		}
 	}
 
 	&__bg-clouds {
@@ -78,6 +91,10 @@
 					width: 30vw;
 					left: 7.5rem;
 				}
+
+				@media (max-width: 768px) {
+				  top: -9rem;
+				}
 			}
 
 			&:nth-child(2) {
@@ -90,6 +107,11 @@
 				  width: 80vw;
 				  top:0;
 				}
+
+				@media (max-width: 768px) {
+				  width: 95vw;
+
+				}
 			}
 
 			&:nth-child(3) {
@@ -100,6 +122,10 @@
 
 				@media (max-width: 1200px) {
 				  right: -7rem;
+				}
+
+				@media (max-width: 768px) {
+				  right: -5rem;
 				}
 			}
 		}
