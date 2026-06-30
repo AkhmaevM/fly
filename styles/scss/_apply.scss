@@ -1,11 +1,16 @@
 $gap: 1.5rem;
-
+$gap-small: 1rem;
+$gap-xsmall: 0.8rem;
 .apply {
 	@media (max-width: 1650px) {
 		padding-left: 0;
 		padding-right: 0;
 	}
 
+	@media (max-width: 480px) {
+		padding-left: 1.25rem;
+		padding-right: 1.25rem;
+	}
 	&__grid {
 		display: grid;
 		grid-template-columns: 1fr 2.35fr 1fr;
@@ -23,6 +28,14 @@ $gap: 1.5rem;
 		@media (max-width: 992px) {
 			grid-template-columns: 1fr 30fr 1fr;
 		}
+
+		@media (max-width: 768px) {
+			gap: $gap-small;
+		}
+
+		@media (max-width: 480px) {
+			display: flex;
+		}
 	}
 
 	&__empty-wrapper {
@@ -32,6 +45,15 @@ $gap: 1.5rem;
 		height: 100%;
 		align-self: stretch;
 		grid-row: 1 / span 2;
+
+		@media (max-width: 768px) {
+			gap: $gap-small;
+		}
+
+		@media (max-width: 480px) {
+			display: none;
+			gap: $gap-xsmall;
+		}
 
 		&:last-child > div {
 			border-radius: 1rem 0 0 1rem;
@@ -52,6 +74,13 @@ $gap: 1.5rem;
 		flex-direction: column;
 		gap: $gap;
 		align-self: stretch;
+
+		@media (max-width: 768px) {
+			gap: $gap-small;
+		}
+		@media (max-width: 480px) {
+			gap: $gap-xsmall;
+		}
 	}
 
 	&__first-plane {
@@ -68,8 +97,19 @@ $gap: 1.5rem;
 		}
 
 		@media (max-width: 992px) {
-			top: -.6rem;
+			top: -0.6rem;
 			right: -9rem;
+		}
+
+		@media (max-width: 768px) {
+			top: -2.5rem;
+			right: -0.7rem;
+			max-width: 125%;
+		}
+
+		@media (max-width: 480px) {
+		  top: -3.7rem;
+		  right: -13rem;
 		}
 	}
 
@@ -79,6 +119,11 @@ $gap: 1.5rem;
 		left: -8rem;
 		max-width: 130%;
 		height: auto;
+
+		@media (max-width: 768px) {
+			top: -2rem;
+			left: -4rem;
+		}
 	}
 
 	&__card {
@@ -92,13 +137,30 @@ $gap: 1.5rem;
 		gap: $gap;
 		overflow: hidden;
 		will-change: transform;
+
+		@media (max-width: 768px) {
+			padding: 1.7rem;
+			gap: $gap-small;
+		}
+
+		@media (max-width: 480px) {
+			gap: $gap-xsmall;
+		}
+
 		&--top {
 			min-height: 25rem;
 			justify-content: space-between;
 
 			@media (max-width: 992px) {
-			  min-height: 27.2rem;
+				min-height: 27.2rem;
+			}
 
+			@media (max-width: 768px) {
+				min-height: 21rem;
+			}
+
+			@media (max-width: 480px) {
+				min-height: 14rem;
 			}
 
 			> button {
@@ -115,6 +177,10 @@ $gap: 1.5rem;
 			padding-top: 15rem;
 			align-items: center;
 
+			@media (max-width: 768px) {
+				margin-top: 11rem;
+			}
+
 			> button {
 				width: max-content;
 			}
@@ -126,6 +192,14 @@ $gap: 1.5rem;
 			flex-direction: column;
 			justify-content: space-between;
 			gap: $gap;
+
+			@media (max-width: 768px) {
+				gap: $gap-small;
+			}
+
+			@media (max-width: 480px) {
+				gap: $gap-xsmall;
+			}
 		}
 	}
 
@@ -134,13 +208,26 @@ $gap: 1.5rem;
 		grid-template-columns: 1fr 1fr;
 		gap: $gap;
 		width: 100%;
+
+		@media (max-width: 768px) {
+			gap: $gap-small;
+		}
 	}
 
 	&__title {
 		font-size: 1.9rem;
 		font-weight: 600;
 		color: #23233d;
+		font-size: 1.6rem;
 		line-height: 1.2;
+
+		@media (max-width: 768px) {
+			font-size: 1.4rem;
+		}
+
+		@media (max-width: 480px) {
+			font-size: 1rem;
+		}
 
 		&--light {
 			color: #fff;
@@ -151,6 +238,10 @@ $gap: 1.5rem;
 		display: flex;
 		flex-direction: column;
 		gap: 0.5rem;
+
+		@media (max-width: 768px) {
+			gap: $gap-small;
+		}
 	}
 
 	&__message {
@@ -158,6 +249,11 @@ $gap: 1.5rem;
 		padding: 0.6rem 1.2rem;
 		font-size: 0.9rem;
 		min-width: 80%;
+
+		@media (max-width: 768px) {
+			font-size: 0.7rem;
+			padding: 0.5rem 0.7rem;
+		}
 
 		&-user {
 			background: #26a4ff;

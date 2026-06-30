@@ -1,24 +1,40 @@
 .header {
-
 	position: sticky;
 	z-index: 100;
 	top: 0;
 	background: transparent;
-	transition: background-color .3s ease;
+	transition: background-color 0.3s ease;
+
+	// @media (max-width: 480px) {
+	// 	position: fixed;
+	// 	bottom: 0;
+	// 	left: 0;
+	// 	width: 100%;
+	// 	top: auto;
+
+	// 	background: whitesmoke;
+	// 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+	// }
 
 	&--scrolled {
 		background: whitesmoke;
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-
 	}
 
-
-	>.container {
+	> .container {
 		padding: 1.2rem 2rem;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		position: relative;
+
+		@media (max-width: 768px) {
+			padding: 1rem 1.5rem;
+		}
+
+		@media (max-width: 480px) {
+			padding: 0.8rem 1rem;
+		}
 	}
 
 	&__logo {
@@ -26,24 +42,32 @@
 		font-weight: 700;
 		text-decoration: none;
 		color: $color-text;
+
+		@media (max-width: 480px) {
+			font-size: 1rem;
+		}
 	}
 
 	&__menu {
-		>ul {
+		> ul {
 			display: flex;
 			align-items: center;
 			gap: 1rem;
 			list-style-type: none;
 
-			>li {
+			> li {
 				list-style-type: none;
 			}
 
-			>li>a {
+			> li > a {
 				font-weight: 500;
 				color: $color-muted;
 				transition: color 0.3s ease;
 				text-decoration: none;
+
+				@media (max-width: 480px) {
+				  font-size: 0.9rem;
+				}
 
 				&:hover {
 					color: $color-text;

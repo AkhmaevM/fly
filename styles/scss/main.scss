@@ -44,11 +44,11 @@ button {
 
 .non-select-image {
 	pointer-events: none;
-	user-select: none;
-	text-decoration: none;
-	will-change: transform;
-	backface-visibility: hidden;
-	transform: translateZ(0);
+	// user-select: none;
+	// text-decoration: none;
+	// will-change: transform;
+	// backface-visibility: hidden;
+	// transform: translateZ(0);
 }
 
 .will-change-transform,

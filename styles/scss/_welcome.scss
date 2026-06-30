@@ -6,6 +6,9 @@
 	min-height: 60vh;
 	margin-top: 7rem;
 
+	@media (max-width: 480px) {
+	  margin-top: 4rem;
+	}
 	&__information {
 		width: 40%;
 		margin: auto;
@@ -18,7 +21,7 @@
 		}
 
 		@media (max-width: 768px) {
-		  width: 80%;
+			width: 80%;
 		}
 	}
 
@@ -28,7 +31,11 @@
 		line-height: 1;
 
 		@media (max-width: 768px) {
-		  font-size: 5rem;
+			font-size: 5rem;
+		}
+
+		@media (max-width: 480px) {
+			font-size: 4px;
 		}
 	}
 
@@ -60,12 +67,17 @@
 		}
 
 		@media (max-width: 1200px) {
-		  bottom: -18rem;
+			bottom: -18rem;
 		}
 
 		@media (max-width: 768px) {
-		  bottom: -14rem;
-		  max-width: 140%;
+			bottom: -14rem;
+			max-width: 140%;
+		}
+
+		@media (max-width: 480px) {
+			bottom: -10rem;
+			max-width: 145%;
 		}
 	}
 
@@ -93,7 +105,7 @@
 				}
 
 				@media (max-width: 768px) {
-				  top: -9rem;
+					top: -9rem;
 				}
 			}
 
@@ -102,15 +114,14 @@
 				left: 49%;
 				transform: translateX(-50%);
 				width: 60vw;
-			
+
 				@media (max-width: 1200px) {
-				  width: 80vw;
-				  top:0;
+					width: 80vw;
+					top: 0;
 				}
 
 				@media (max-width: 768px) {
-				  width: 95vw;
-
+					width: 95vw;
 				}
 			}
 
@@ -121,11 +132,11 @@
 				transform: rotate(10deg);
 
 				@media (max-width: 1200px) {
-				  right: -7rem;
+					right: -7rem;
 				}
 
 				@media (max-width: 768px) {
-				  right: -5rem;
+					right: -5rem;
 				}
 			}
 		}
